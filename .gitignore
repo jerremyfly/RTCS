@@ -30,3 +30,28 @@
 *.exe
 *.out
 *.app
+
+# vs file
+*.opensdf
+*.suo
+*.sdf
+*.user
+*.sln
+
+# our local dir
+/bin
+/licode
+/RTCS
+/RTCSP2P
+/RTCSSerialize
+/Sphinx
+/WinHookException
+/RTCSCoreSDK
+/RTCSSDKForC
+!sample/
+/sample/*
+!/sample/CSDKExample
+**/Debug/
+**/Release/
+**/GeneratedFiles/
+/rtcs-room
