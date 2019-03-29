@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.rtcs</groupId>
+	<artifactId>rtcs-room</artifactId>
+	<version>1.2.5</version>
+    <packaging>jar</packaging>
+
+	<name>rtcs-room</name>
+	<description>rtcs-room for media server</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.0.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!--  <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>-->
+		<dependency>
+		    <groupId>com.corundumstudio.socketio</groupId>
+		    <artifactId>netty-socketio</artifactId>
+		    <version>1.7.14</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.google.protobuf</groupId>
+		    <artifactId>protobuf-java</artifactId>
+		    <version>3.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.rtcs</groupId>
+			<artifactId>rtcs-room-resource</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<defaultGoal>package</defaultGoal>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
+			</plugin>
+		</plugins>
+		<resources>  
+            <resource><!--  // 将lib目录下的jar包拷贝到BOOT-INF/lib/目录下-->  
+                <directory>${basedir}/lib/httpcomponents-client-4.5.5/lib/</directory>
+                <targetPath>BOOT-INF/lib/</targetPath>  
+                <includes>  
+                    <include>*.jar</include>  
+                </includes>  
+            </resource>
+            <!--  <resource>// 如果不加上这个配置，不然src/main/resource目录下的配置文件就不会打到jar包下去了  
+                <directory>src/main/resources</directory>  
+                <targetPath>BOOT-INF/classes/</targetPath>  
+            </resource>  -->
+        </resources>  
+	</build>
+</project>
