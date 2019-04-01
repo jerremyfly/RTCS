@@ -7,16 +7,23 @@
 ![项目结构图](doc/项目结构图.jpg)
 如图所示，该项目包含的各个部分分模块介绍如下：<br>
 Server端：<br>
+<br>
+[Licode](https://github.com/lynckia/licode)是本项目使用的流媒体传输SFU<br>
+<br>
+[RTCS-Room业务服务器](https://github.com/jerremyfly/RTCS/tree/master/rtcs-room)是自定义的业务服务器，负责与核心licode服务器交互http接口，与客户端RTCSCoreSDK有TCP长连接。提供了业务上的登录等功能，定义扩展业务功能接口，方便实现自定义业务功能。如APP对应的Extern扩展业务功能就是继承的RTCS-Room业务服务器定义的接口。<br>
+<br>
+[Extern扩展业务功能]()对应自定义开发业务需要扩展的业务功能模块，主要实现继承RTCS-ROOM业务服务器定义的接口。<br>
+<br>
 Client端：<br>
-
-
-该系统是一款基于webrtc/licode实现的桌面端视频会商软件，可以充分满足公司或个人视频会议需求。音视频底层基于webrtc实现，包括音视频采集、<br>
-编/解码、优化、播放等；核心服务器使用的是licode，维护了房间的概念，可以高效的进行音视频数据的转发。<br>
-CSDKSDK是在webrtc和licode的基础上，封装的C++接口。用户只需关注接口的调用，而不必关心底层代码的管理，可以集中精力放在自己系统逻辑上，<br>
-简化了开发流程，节约了开发时间。封装的C++接口能充分满足视频会商需求，具有简单、灵活、高效等优点，极大的方便了用户的二次开发。<br>
-视频会商系统的客户端使用Qt实现，可以支持跨平台（此Example只提供windows下的demo）。<br>
-VideoConsultation是一个稍复杂的视频会商客户端，在CSDKSDK接口的基础上，添加了更复杂的逻辑，使得会商系统更加人性化，这里为用户提供参考。<br>
-
+<br>
+[RTCSCoreSDK]()(--待开源)是对外提供C++接口的SDK库，适配了webrtc和licode，以及所有音视频相关操作，会议房间登录等都在该sdk完成。<br>
+<br>
+[RTCSSDKForC]()(--待开源)是对外提供C接口的SDK库，主要封装了RTCSCoreSDK的c++接口，方便其他语言开发。用户只需关注接口的调用，而不用关心底层代码的管理，可以集中精力放在自己系统的业务逻辑和UI上，简单、灵活、高效的接口操作，极大的方便用户二次开发音视频相关应用。<br>
+<br>
+[CSDKExample](https://github.com/jerremyfly/RTCS/tree/master/sample/CSDKExample)是基于RTCSSDKForC这个C接口开发的Example，使用Qt开发。演示了所有接口的操作和使用方式，开发自定义业务系统可以参考此系统完成。<br>
+<br>
+[APP]()自定义业务开发的系统，基于RTCSSDKForC，对应的服务器业务为Extern扩展业务功能。<br>
+<br>
 
 #### 安装教程
 
