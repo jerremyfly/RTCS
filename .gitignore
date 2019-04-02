@@ -14,7 +14,6 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -24,7 +23,6 @@
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
 *.exe
@@ -46,11 +44,18 @@
 /RTCSSerialize
 /Sphinx
 /WinHookException
+/asr_record
+/open_test
 /RTCSCoreSDK
-/RTCSSDKForC
+!/RTCSSDKForC
+/RTCSSDKForC/*
+!/RTCSSDKForC/include
 !sample/
 /sample/*
 !/sample/CSDKExample
+!/depends
+/depends/*
+!/depends/Release
 **/Debug/
-**/Release/
 **/GeneratedFiles/
+
