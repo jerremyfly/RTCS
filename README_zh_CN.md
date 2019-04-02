@@ -1,5 +1,5 @@
 # RTCS
-
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 #### 介绍
 该项目包含了一个简单的基于webrtc的视频会议客户端和服务器系统，可以充分满足公司团队或个人的视频会议需求。
 
@@ -24,12 +24,6 @@ Client端：<br>
 <br>
 [APP]()自定义业务开发的系统，基于RTCSSDKForC，对应的服务器业务为Extern扩展业务功能。<br>
 <br>
-
-#### 安装教程
-
-1. xxxx
-2. xxxx
-3. xxxx
 
 #### 使用说明
 
