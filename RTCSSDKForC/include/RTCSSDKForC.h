@@ -108,7 +108,7 @@ RTCS_C_API int RTCS_TransBufferEx(int pluginID,int userid, const char* lpBuf,
 //枚举视频采集设备
 RTCS_C_API int RTCS_EnumVideoCapture(char** lpDeviceName,
                                      unsigned int& dwDeviceNum);
-//枚举视频采集设备
+//选择指定视频采集设备
 RTCS_C_API int RTCS_SelectVideoCapture(const char* szCaptureName);
 //获取当前使用的视频采集设备
 RTCS_C_API int RTCS_GetCurVideoCapture(char* deviceName, int len);
@@ -135,7 +135,7 @@ RTCS_C_API int RTCS_SetRenderFlag(int userid, int render_flag);
 /////////////////////////////////////////////////////////////////
 
 /////////////////////////////音频设备相关/////////////////////////
-//选择音频播放设备
+//枚举音频采集设备
 RTCS_C_API int RTCS_EnumAudioCapture(char** lpDeviceName,
                                      unsigned int& dwDeviceNum);
 //选择音频采集设备
