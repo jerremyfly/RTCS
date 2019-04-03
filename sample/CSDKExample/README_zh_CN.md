@@ -7,6 +7,7 @@
 调用方法，用户可以根据自己的需求调用SDK接口对demo做出修改或重写。<br>
 
 ### 使用说明
-1. 下载代码，使用vs（13或17）或qt creator打开工程，编译；<br>
-2. 把提供的第三方库和SDK相关动态库拷贝至生成目录；<br>
+1. 下载代码，使用配置好qt5.6.1的vs（13或17）或qt creator打开工程，把下载RTCSSDKForC文件夹
+   放置sample同一目录（或重新配置头文件包含目录），编译；<br>
+2. 把depends提供的第三方库和SDK相关动态库、静态库拷贝至生成目录bin\release下；<br>
 3. 运行CSDKExample。<br>
