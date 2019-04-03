@@ -11,4 +11,4 @@
 3. 运行CSDKExample。<br>
 
 #### 注：
-[RTCSSDKForC](../../RTCSSDKForC/include) 包含CSDKExample需要引用的头文件，其中RTCSSDKForC.h(../../RTCSSDKForC/include/RTCSSDKForC.h) 即SDK包含的所有接口。
+[RTCSSDKForC](../../RTCSSDKForC/include) 包含CSDKExample需要引用的头文件，其中[RTCSSDKForC.h](../../RTCSSDKForC/include/RTCSSDKForC.h) 即SDK包含的所有接口。
